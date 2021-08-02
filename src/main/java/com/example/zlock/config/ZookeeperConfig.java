@@ -20,7 +20,7 @@ public class ZookeeperConfig {
             final CountDownLatch countDownLatch = new CountDownLatch(1);
             // 连接成功后，会回调watcher监听，此连接操作是异步的，执行完new语句后，直接调用后续代码
             // 可指定多台服务地址 127.0.0.1:2181,127.0.0.1:2182,127.0.0.1:2183
-            String connectString = "m.dev.ultra.local:2181";
+            String connectString = "172.16.4.80:2181";
             zooKeeper = new ZooKeeper(connectString, 4000, new Watcher() {
 
                 @Override
